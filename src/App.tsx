@@ -13,6 +13,13 @@ import HospitalDashboard from "./pages/dashboard/HospitalDashboard";
 import DonorDashboard from "./pages/dashboard/DonorDashboard";
 import BloodBankDashboard from "./pages/dashboard/BloodBankDashboard";
 import AdminDashboard from "./pages/dashboard/AdminDashboard";
+import DonorManagement from "./pages/hospital/DonorManagement";
+import PatientManagement from "./pages/hospital/PatientManagement";
+import EmergencySOS from "./pages/hospital/EmergencySOS";
+import Profile from "./pages/donor/Profile";
+import SOSAlerts from "./pages/donor/SOSAlerts";
+import RecentActivity from "./pages/donor/RecentActivity";
+import Inventory from "./pages/bloodbank/Inventory";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -32,8 +39,18 @@ const App = () => (
               
               {/* Protected Dashboard Routes */}
               <Route path="/dashboard/hospital" element={<DashboardLayout><HospitalDashboard /></DashboardLayout>} />
+              <Route path="/hospital/donors" element={<DashboardLayout><DonorManagement /></DashboardLayout>} />
+              <Route path="/hospital/patients" element={<DashboardLayout><PatientManagement /></DashboardLayout>} />
+              <Route path="/hospital/emergency" element={<DashboardLayout><EmergencySOS /></DashboardLayout>} />
+              
               <Route path="/dashboard/donor" element={<DashboardLayout><DonorDashboard /></DashboardLayout>} />
+              <Route path="/donor/profile" element={<DashboardLayout><Profile /></DashboardLayout>} />
+              <Route path="/donor/sos" element={<DashboardLayout><SOSAlerts /></DashboardLayout>} />
+              <Route path="/donor/activity" element={<DashboardLayout><RecentActivity /></DashboardLayout>} />
+              
               <Route path="/dashboard/bloodbank" element={<DashboardLayout><BloodBankDashboard /></DashboardLayout>} />
+              <Route path="/bloodbank/inventory" element={<DashboardLayout><Inventory /></DashboardLayout>} />
+              
               <Route path="/dashboard/admin" element={<DashboardLayout><AdminDashboard /></DashboardLayout>} />
               
               <Route path="*" element={<NotFound />} />
