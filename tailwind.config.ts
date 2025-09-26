@@ -22,6 +22,7 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          hover: "hsl(var(--primary-hover))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -57,6 +58,35 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        blood: {
+          DEFAULT: "hsl(var(--blood))",
+          foreground: "hsl(var(--blood-foreground))",
+          hover: "hsl(var(--blood-hover))",
+        },
+        health: {
+          DEFAULT: "hsl(var(--health))",
+          foreground: "hsl(var(--health-foreground))",
+          hover: "hsl(var(--health-hover))",
+        },
+        warning: {
+          DEFAULT: "hsl(var(--warning))",
+          foreground: "hsl(var(--warning-foreground))",
+          hover: "hsl(var(--warning-hover))",
+        },
+      },
+      backgroundImage: {
+        'gradient-medical': 'var(--gradient-medical)',
+        'gradient-blood': 'var(--gradient-blood)',
+        'gradient-health': 'var(--gradient-health)',
+      },
+      boxShadow: {
+        'medical': 'var(--shadow-medical)',
+        'blood': 'var(--shadow-blood)',
+        'card': 'var(--shadow-card)',
+      },
+      transitionProperty: {
+        'smooth': 'var(--transition-smooth)',
+        'quick': 'var(--transition-quick)',
       },
       borderRadius: {
         lg: "var(--radius)",
